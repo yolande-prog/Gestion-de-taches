@@ -3,12 +3,12 @@
 @section('content')
 <div class="container-fluid">
     <div class="row h-100">
-        <div class="col-md-6 loginImage d-none d-md-block bg-primary" style="background-repeat: no-repeat;">
+        <div class="col-md-6 loginImage d-none d-md-block" style="background-color: #00679A;">
             <div class="d-flex justify-content-center mt-4">
-               <img src="{{ asset('/images/login.jpg') }}" class="mt-5" alt="Login Image" style="object-fit:cover;margin-top: 50px">
+               <img src="{{ asset('/images/login1.png') }}" width="80%" class="mt-5" alt="Login Image" style="object-fit:cover;margin-top: 50px">
             </div>
         </div>
-        <div class="" style="position:absolute;top:13%;left:14%"><h2 class="text-info" style="">Gestion des taches</h2></div>
+        <div class="" style="position:absolute;top:10%;left:14%"><h2 class="text-info" style="">Gestion des taches</h2></div>
 
         <div class="col-md-6" style="background-color:white">
             <div class="container align-items-center">
