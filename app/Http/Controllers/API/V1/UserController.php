@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\API\V1;
 
-use App\Http\Requests\Users\UserRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\Users\UserRequest;
+use App\Http\Controllers\API\V1\BaseController;
 
 class UserController extends BaseController
 {
@@ -15,7 +17,7 @@ class UserController extends BaseController
      */
     public function __construct()
     {
-        $this->middleware('auth:api');
+        // $this->middleware('auth:api');
     }
 
     /**
@@ -25,9 +27,9 @@ class UserController extends BaseController
      */
     public function index()
     {
-        if (!\Gate::allows('isAdmin')) {
-            return $this->unauthorizedResponse();
-        }
+        // if (!Gate::allows('isAdmin')) {
+        //     return $this->unauthorizedResponse();
+        // }
         // $this->authorize('isAdmin');
 
         $users = User::latest()->paginate(10);
@@ -88,7 +90,7 @@ class UserController extends BaseController
     public function destroy($id)
     {
 
-        $this->authorize('isAdmin');
+        // $this->authorize('isAdmin');
 
         $user = User::findOrFail($id);
         // delete the user

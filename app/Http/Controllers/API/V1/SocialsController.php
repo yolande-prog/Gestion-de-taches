@@ -15,7 +15,7 @@ class SocialsController extends BaseController
      */
     public function __construct(Social $social)
     {
-        $this->middleware('auth:api');
+        // $this->middleware('auth:api');
         $this->social = $social;
     }
 
@@ -115,7 +115,7 @@ class SocialsController extends BaseController
     public function destroy($id)
     {
 
-        $this->authorize('isAdmin');
+        // $this->authorize('isAdmin');
 
         $social = $this->social->findOrFail($id);
 

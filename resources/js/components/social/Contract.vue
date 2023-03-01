@@ -110,7 +110,6 @@
                                   class="form-control" :class="{ 'is-invalid': form.errors.has('function') }">
                               <has-error :form="form" field="function"></has-error>
                           </div>
-                              {{ form.name }}
                           <div class="form-group">
                               <label>Durée</label>
                               <input v-model="form.duration" type="text" name="duration"
@@ -126,7 +125,6 @@
                                   class="form-control" :class="{ 'is-invalid': form.errors.has('city') }">
                               <has-error :form="form" field="city"></has-error>
                           </div>
-                              {{ form.price }}
                           <!-- <div class="form-group">
 
                               <label>Category</label>
@@ -144,7 +142,6 @@
                                   class="form-control" :class="{ 'is-invalid': form.errors.has('advance_notice_reconduction') }">
                               <has-error :form="form" field="advance_notice_reconduction"></has-error>
                           </div>
-{{ form.advance_notice_reconduction }}
                           <div class="form-group">
                             <label>Date debut contrat</label>
                             <datepicker placeholder="Choissisez une Date" v-model="form.start_contract_date" format="yyyy-MM-dd"></datepicker>
@@ -180,9 +177,7 @@
                                     <label>Alarm 1</label>
                                     <datepicker class="w-100" placeholder="Choissisez une Date" v-model="form.alarm1_date"></datepicker>
                                     <has-error :form="form" field="alarm1_date"></has-error>
-                                </div>{{ moment(date1, 'DD/MM/YYYY').format("DD MMM YYYY") }}
-                                <!-- {{ form.alarm1 }}
-                                {{ date1 }} -->
+                                </div>
                             </div>
 
                             <div class="col-md-4 w-100">
@@ -191,7 +186,6 @@
                                     <datepicker class="w-100" placeholder="Choissisez une Date" v-model="form.alarm2_date" :min="minDate2" range></datepicker>
                                     <has-error :form="form" field="alarm2_date"></has-error>
                                 </div>
-                                {{ form.alarm2 }}
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
